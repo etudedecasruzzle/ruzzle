@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <SDL/SDL.h>
+#include "dico.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +14,8 @@ int main(int argc, char *argv[])
     }
     else {
         freopen("CON","w",stdout);
+        FILE* fichier = fopen("dico.txt","r");
+        dico* dictionnaire = create_dico_from_file(fichier);
         fprintf(stdout,"OK\n");
         SDL_Surface *screen;
         screen = SDL_SetVideoMode(640,480,16,SDL_HWSURFACE);
