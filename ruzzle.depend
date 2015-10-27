@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1444920096 source:d:\cours\etude_de_cas\ruzzle\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1445874342 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"dico.h"
+
+1445874260 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\alphabet.c
+
+1445874104 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\dico.c
+	"dico.h"
+
+1445874282 c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\dico.h
+	<stdio.h>
+	"mot.h"
+
+1445874266 c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\mot.h
+	"lettre.h"
+
+1445874246 c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\lettre.h
+
+1445871501 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\grille.c
+
+1445870791 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\lettre.c
+
+1445871643 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\mot.c
+
+1445905315 source:c:\users\quentin\desktop\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+
