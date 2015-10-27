@@ -29,8 +29,10 @@
 
 1445871643 source:c:\users\mimi\documents\etude_de_cas\ruzzle\ruzzle\mot.c
 
-1445905315 source:c:\users\quentin\desktop\ruzzle\main.c
+1445907518 source:c:\users\quentin\desktop\ruzzle\main.c
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
+
+1445847590 source:c:\users\quentin\desktop\ruzzle\alphabet.c
 
