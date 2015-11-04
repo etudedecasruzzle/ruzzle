@@ -16,11 +16,11 @@ dico* create_dico_from_file(FILE* fichier){
     char* line[128];
     int hache = 0;
     mot* mot_temp = malloc(sizeof(mot));
-    while (fgets(line,sizeof(line),fichier) != NULL) {
+    /*while (fgets(line,sizeof(line),fichier) != NULL) {
         hache = hashage(line,nLignes);
 
         dictionnaire->dictionnaire*[hache]->word = line;
-    }
+    }*/
     return dictionnaire;
 }
 

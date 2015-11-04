@@ -36,3 +36,29 @@
 
 1445847590 source:c:\users\quentin\desktop\ruzzle\alphabet.c
 
+1446640790 source:c:\users\mimi\documents\l3\ruzzle\alphabet.c
+
+1446640790 source:c:\users\mimi\documents\l3\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"dico.h"
+
+1446640790 c:\users\mimi\documents\l3\ruzzle\dico.h
+	<stdio.h>
+	"mot.h"
+
+1446640790 c:\users\mimi\documents\l3\ruzzle\mot.h
+	"lettre.h"
+
+1446640790 c:\users\mimi\documents\l3\ruzzle\lettre.h
+
+1446641136 source:c:\users\mimi\documents\l3\ruzzle\dico.c
+	"dico.h"
+
+1446640790 source:c:\users\mimi\documents\l3\ruzzle\grille.c
+
+1446640790 source:c:\users\mimi\documents\l3\ruzzle\lettre.c
+
+1446640790 source:c:\users\mimi\documents\l3\ruzzle\mot.c
+
