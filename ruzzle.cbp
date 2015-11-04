@@ -38,9 +38,29 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="alphabet.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="alphabet.h" />
+		<Unit filename="dico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dico.h" />
+		<Unit filename="grille.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="grille.h" />
+		<Unit filename="lettre.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lettre.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="mot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mot.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
