@@ -36,29 +36,40 @@
 
 1445847590 source:c:\users\quentin\desktop\ruzzle\alphabet.c
 
-1446640790 source:c:\users\mimi\documents\l3\ruzzle\alphabet.c
+1447238864 source:c:\users\mimi\documents\l3\ruzzle\alphabet.c
+	"alphabet.h"
 
-1446641673 source:c:\users\mimi\documents\l3\ruzzle\main.c
+1447499993 source:c:\users\mimi\documents\l3\ruzzle\main.c
 	<stdio.h>
 	<stdlib.h>
 	<SDL/SDL.h>
 	"dico.h"
 
-1446640790 c:\users\mimi\documents\l3\ruzzle\dico.h
+1447247388 c:\users\mimi\documents\l3\ruzzle\dico.h
 	<stdio.h>
+	<string.h>
 	"mot.h"
 
-1446640790 c:\users\mimi\documents\l3\ruzzle\mot.h
+1447499877 c:\users\mimi\documents\l3\ruzzle\mot.h
 	"lettre.h"
 
-1446640790 c:\users\mimi\documents\l3\ruzzle\lettre.h
+1447249117 c:\users\mimi\documents\l3\ruzzle\lettre.h
 
-1446641136 source:c:\users\mimi\documents\l3\ruzzle\dico.c
+1447247135 source:c:\users\mimi\documents\l3\ruzzle\dico.c
+	<stdlib.h>
+	<stdio.h>
 	"dico.h"
 
 1446640790 source:c:\users\mimi\documents\l3\ruzzle\grille.c
 
-1446640790 source:c:\users\mimi\documents\l3\ruzzle\lettre.c
+1447248379 source:c:\users\mimi\documents\l3\ruzzle\lettre.c
+	"lettre.h"
 
-1446640790 source:c:\users\mimi\documents\l3\ruzzle\mot.c
+1447500091 source:c:\users\mimi\documents\l3\ruzzle\mot.c
+	<stdio.h>
+	<stdlib.h>
+	"mot.h"
+
+1447239569 c:\users\mimi\documents\l3\ruzzle\alphabet.h
+	"lettre.h"
 

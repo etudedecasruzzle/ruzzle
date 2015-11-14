@@ -38,10 +38,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="alphabet.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="alphabet.h" />
 		<Unit filename="dico.c">
 			<Option compilerVar="CC" />
 		</Unit>
