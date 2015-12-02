@@ -5,9 +5,6 @@
 #define BUFFER_SIZE 100 //plus grand que le plus grand mot possible
 #define HAUTEUR_MAX BUFFER_SIZE + 40
 
-/* Arbres, d'après le TP 3 */
-
-
 arbre noeud(char data, arbre g, arbre d){
   arbre res;
   res = (arbre) malloc(sizeof(struct chararbre));

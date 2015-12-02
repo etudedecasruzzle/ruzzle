@@ -2,11 +2,19 @@
 #include <stdlib.h>
 #include "mot.h"
 
-mot* create_mot(lettre** lettres, int taille){
+int taille(mot* word){
+    int i;
+    while (word->word[i]){
+        i++;
+    }
+    return i;
+}
+
+mot* create_mot(lettre** lettres, int tail){
     mot* word = malloc(sizeof(mot));
     word->word = lettres;
     word->score = 0;
-    word->taille = taille;
+    word->taille = taille(word);
     return word;
 }
 
@@ -22,19 +30,15 @@ int calcul_score(mot* word){
     return word->score;
 }
 
-/*int taille(mot* word){
-    int i;
-    while (word->word[i] != NULL){
-        i++;
-    }
-    return i;
-}*/
+
+
 
 char* retrouve_chaine_carac(mot* word){
     int i;
     char* chaine[word->taille];
-    for (i=0;i<sizeof(chaine);i++){
-        *chaine[i] = word->word[i]->letter;
+    while (chaine[i]){
+        chaine[i]=word->word[i]->letter;
+        i++;
     }
     return *chaine;
 }
