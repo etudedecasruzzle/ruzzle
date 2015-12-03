@@ -75,6 +75,7 @@ lettre* create_lettre(char nom){
 
 int calcul_score_lettre(lettre* word){
     int score=word->score*word->multiplicateur_lettre;
+    return score;
 }
 
 int score_mot(lettre* a){

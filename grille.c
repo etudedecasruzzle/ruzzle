@@ -1,5 +1,5 @@
+
 #include "grille.h"
-#include "lettre.h"
 
 grille* create_grille(char* fichier){
     freopen("CON","w",stdout);
@@ -65,7 +65,17 @@ void affichage_grille(grille* gr){
     }
 }
 
-mot** meilleur_score(grille* gr){
-
+liste_mot* auto_grille(int i, int j,liste_mot* liste_fin,mot* temp,arbre dictio, grille* gr){
+    char mot_fin[16]; //mot de maximum 16 lettres (16 cases dans une grille)
+    char carac;
+    carac = dictio->data;
+    if ((carac == NULL) || (carac > dictio->data)) return NULL;
+    if (carac == '\0') liste_fin = ajout_mot(liste_fin,temp);
+    //on cherche une case avec le caractère
+    //Si on trouve, on passe aux cases autour et l'arbre gauche
+    //Sinon, arbre droite
+    return liste_fin;
 }
+
+
 

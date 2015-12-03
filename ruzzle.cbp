@@ -50,6 +50,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="lettre.h" />
+		<Unit filename="liste_mot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="liste_mot.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
