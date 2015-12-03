@@ -48,6 +48,7 @@ mot* create_mot_sans_tail(){
     return new_mot;
 }
 
+<<<<<<< HEAD
 mot* ajout_lettre(mot* word,lettre* let){
     mot* new_mot = malloc(sizeof(mot));
     word->taille++;
@@ -59,6 +60,16 @@ mot* ajout_lettre(mot* word,lettre* let){
     new_mot->word[word->taille-1]=let;
     new_mot->taille = word->taille;
     return new_mot;
+=======
+char* retrouve_chaine_carac(mot* word){
+    int i=0;
+    char* chaine=(char*)malloc(word->taille*sizeof(char));
+    while (chaine[i]){
+        chaine[i]=get_char(word->word[i]);
+        i++;
+    }
+    return chaine;
+>>>>>>> origin/master
 }
 
 
