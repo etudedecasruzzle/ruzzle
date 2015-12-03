@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
         arbre dico;
         printf("création du dictionnaire...\n");
         //Test création lettre, mot, taille des mots, score des mots
-        /*lettre* a = create_lettre('a');
+        lettre* a = create_lettre('a');
         lettre* b = create_lettre('b');
         lettre* a2 = create_lettre('a');
         lettre* i = create_lettre('i');
@@ -50,11 +50,22 @@ int main(int argc, char *argv[])
         abaissement[9] = n;
         abaissement[10] = t;
         mot* word = create_mot(abaissement,11);
-        fprintf(stdout, "taille de word :%d\n",taille(word));
+        fprintf(stdout, "taille de word :%d\n",word->taille);
         fprintf(stdout,"score d'%s : %d\n", retrouve_chaine_carac(word),calcul_score(word));
-        */
+
         //Création dictionnaire
         dico = cree_dico("dico.txt");
+        /*mot** meilleur = meilleur_score(gr,dico);
+        int score_mot=0;
+        int compt=0;
+        int score_tot = 0;
+        while(meilleur[compt]){
+            score_mot = calcul_score(meilleur[compt]);
+            score_tot += score_mot;
+            fprintf(stdout,"%s : %d\n",retrouve_chaine_carac(meilleur[compt]),score_mot);
+            compt++;
+        }
+        fprintf(stdout,"score total : %d",score_tot);*/
         //dico = cree_dico("mots");
         verifie_mots(dico);
         //fprintf(stdout,"OK\n");
