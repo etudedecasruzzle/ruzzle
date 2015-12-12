@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
 #include "liste_mot.h"
 
 liste_mot* create_liste(){
@@ -19,6 +26,10 @@ liste_mot* ajout_mot(liste_mot* liste_m,mot* word){
     new_list->nb_mot = liste_m->nb_mot;
     return new_list;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/master
 
 int meilleur_mot(mot* word,liste_mot* liste_t){
     int i;
@@ -41,3 +52,8 @@ void affichage_liste(liste_mot* liste_t){
         fprintf(stdout,"%c : %i\n",retrouve_chaine_carac(liste_t->liste[i]),calcul_score(liste_t->liste[i]));
     }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> origin/master
