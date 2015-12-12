@@ -32,6 +32,7 @@ lettre* create_lettre_with_2(char nom, int multi_mot, int multi_let){
         case 'x':a->score=10;break;
         case 'y':a->score=10;break;
         case 'z':a->score=10;break;
+        default:a->score=0;break;
     }
     return a;
 }
@@ -69,12 +70,14 @@ lettre* create_lettre(char nom){
         case 'x':a->score=10;break;
         case 'y':a->score=10;break;
         case 'z':a->score=10;break;
+        default:a->score=0;break;
     }
     return a;
 }
 
 int calcul_score_lettre(lettre* word){
     int score=word->score*word->multiplicateur_lettre;
+    return score;
 }
 
 int score_mot(lettre* a){
