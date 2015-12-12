@@ -54,6 +54,7 @@ int main(int argc, char *argv[])
         abaissement[10] = t;
         mot* word = create_mot(abaissement,11);
         fprintf(stdout, "taille de word :%d\n",word->taille);
+<<<<<<< HEAD
         fprintf(stdout,"score d'%s :", retrouve_chaine_carac(word));
         fprintf(stdout,"%d\n",calcul_score(word));*/
 
@@ -72,9 +73,23 @@ int main(int argc, char *argv[])
         word = ajout_lettre(word,t);
         fprintf(stdout,"taille de word : %d\n",word->taille);
         fprintf(stdout,"score d'%s : %d\n",retrouve_chaine_carac(word),calcul_score(word));
+=======
+        fprintf(stdout,"score d'%s : %d\n", retrouve_chaine_carac(word),calcul_score(word));
+>>>>>>> origin/master
 
         //Création dictionnaire
         dico = cree_dico("dico.txt");
+        /*mot** meilleur = meilleur_score(gr,dico);
+        int score_mot=0;
+        int compt=0;
+        int score_tot = 0;
+        while(meilleur[compt]){
+            score_mot = calcul_score(meilleur[compt]);
+            score_tot += score_mot;
+            fprintf(stdout,"%s : %d\n",retrouve_chaine_carac(meilleur[compt]),score_mot);
+            compt++;
+        }
+        fprintf(stdout,"score total : %d",score_tot);*/
         //dico = cree_dico("mots");
 
         //Parcours automatique de la grille

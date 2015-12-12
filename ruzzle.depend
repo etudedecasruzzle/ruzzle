@@ -84,6 +84,11 @@
 	"dico.h"
 
 1449089256 source:e:\ruzzle\dico.c
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
 	<stdlib.h>
 	<stdio.h>
 	"dico.h"
@@ -93,12 +98,17 @@
 	<string.h>
 	"mot.h"
 
+<<<<<<< HEAD
 1449766880 e:\ruzzle\mot.h
+=======
+1449144963 e:\ruzzle\mot.h
+>>>>>>> origin/master
 	"lettre.h"
 
 1449147998 e:\ruzzle\lettre.h
 	<stdlib.h>
 
+<<<<<<< HEAD
 1449920658 source:e:\ruzzle\grille.c
 	"grille.h"
 
@@ -153,8 +163,28 @@
 	"grille.h"
 
 1449154649 f:\ruzzle\grille.h
+=======
+1449098816 source:e:\ruzzle\grille.c
+	"grille.h"
+
+1449098828 e:\ruzzle\grille.h
+>>>>>>> origin/master
+>>>>>>> origin/master
 	<stdlib.h>
 	<stdio.h>
+	"dico.h"
+
+1447247388 e:\ruzzle\dico.h
+	<stdio.h>
+	<string.h>
+	"mot.h"
+
+1449154600 e:\ruzzle\mot.h
+	"lettre.h"
+	"mot.h"
+	"dico.h"
+
+1449148305 source:e:\ruzzle\lettre.c
 	"lettre.h"
 	"mot.h"
 	"dico.h"
@@ -182,4 +212,51 @@
 	<stdio.h>
 	<stdlib.h>
 	"mot.h"
+
+1449144984 source:e:\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"dico.h"
+	"grille.h"
+
+1449150071 source:e:\ruzzle\mot.c
+	<stdio.h>
+	<stdlib.h>
+	"mot.h"
+
+1449147998 e:\ruzzle\lettre.h
+	<stdlib.h>
+
+1449154738 source:e:\ruzzle\grille.c
+	"grille.h"
+
+1449154649 e:\ruzzle\grille.h
+	<stdlib.h>
+	<stdio.h>
+	"lettre.h"
+	"mot.h"
+	"dico.h"
+	"liste_mot.h"
+
+1449148305 source:e:\ruzzle\lettre.c
+	"lettre.h"
+
+1449144984 source:e:\ruzzle\main.c
+	<stdio.h>
+	<stdlib.h>
+	<SDL/SDL.h>
+	"dico.h"
+	"grille.h"
+
+1449154261 source:e:\ruzzle\mot.c
+	<stdio.h>
+	<stdlib.h>
+	"mot.h"
+
+1449153505 e:\ruzzle\liste_mot.h
+	"mot.h"
+
+1449154148 source:e:\ruzzle\liste_mot.c
+	"liste_mot.h"
 
