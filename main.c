@@ -21,8 +21,10 @@ int main(int argc, char *argv[])
         affichage_grille(gr);
         arbre dico;
         printf("création du dictionnaire...\n");
+
+
         //Test création lettre, mot, taille des mots, score des mots
-        /*lettre* a = create_lettre('a');
+        lettre* a = create_lettre('a');
         lettre* b = create_lettre('b');
         lettre* a2 = create_lettre('a');
         lettre* i = create_lettre('i');
@@ -33,7 +35,8 @@ int main(int argc, char *argv[])
         lettre* e2 = create_lettre('e');
         lettre* n = create_lettre('n');
         lettre* t = create_lettre('t');
-        lettre** abaissement = (lettre *) malloc(11*sizeof(lettre*));
+
+        /*lettre** abaissement = (lettre *) malloc(11*sizeof(lettre*));
         int ind=0;
         for (ind=0;ind<11;ind++){
             abaissement[ind]=malloc(sizeof(lettre));
@@ -50,14 +53,38 @@ int main(int argc, char *argv[])
         abaissement[9] = n;
         abaissement[10] = t;
         mot* word = create_mot(abaissement,11);
-        fprintf(stdout, "taille de word :%d\n",taille(word));
-        fprintf(stdout,"score d'%s : %d\n", retrouve_chaine_carac(word),calcul_score(word));
-        */
+        fprintf(stdout, "taille de word :%d\n",word->taille);
+        fprintf(stdout,"score d'%s :", retrouve_chaine_carac(word));
+        fprintf(stdout,"%d\n",calcul_score(word));*/
+
+        //Test création de mot avec mot vide
+        mot* word = create_mot_sans_tail();
+        word = ajout_lettre(word,a);
+        word = ajout_lettre(word,b);
+        word = ajout_lettre(word,a2);
+        word = ajout_lettre(word,i);
+        word = ajout_lettre(word,s);
+        word = ajout_lettre(word,s2);
+        word = ajout_lettre(word,e);
+        word = ajout_lettre(word,m);
+        word = ajout_lettre(word,e2);
+        word = ajout_lettre(word,n);
+        word = ajout_lettre(word,t);
+        fprintf(stdout,"taille de word : %d\n",word->taille);
+        fprintf(stdout,"score d'%s : %d\n",retrouve_chaine_carac(word),calcul_score(word));
+
         //Création dictionnaire
         dico = cree_dico("dico.txt");
         //dico = cree_dico("mots");
-        verifie_mots(dico);
-        //fprintf(stdout,"OK\n");
+
+        //Parcours automatique de la grille
+        liste_mot* liste_fin = create_liste();
+        mot* temp = create_mot_sans_tail();
+        liste_fin = auto_grille(-1,-1,liste_fin,temp,dico,gr);
+        affichage_liste(liste_fin);
+
+
+        fprintf(stdout,"OK\n");
 
 
         SDL_Surface *screen;

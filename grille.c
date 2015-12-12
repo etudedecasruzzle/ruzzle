@@ -1,5 +1,5 @@
+
 #include "grille.h"
-#include "lettre.h"
 
 grille* create_grille(char* fichier){
     freopen("CON","w",stdout);
@@ -65,7 +65,139 @@ void affichage_grille(grille* gr){
     }
 }
 
-mot** meilleur_score(grille* gr){
+liste_mot* auto_grille(int i, int j,liste_mot* liste_fin,mot* temp,arbre dictio, grille* gr){
+    mot* stock = temp;
+    arbre dico = dictio;
+    char carac;
+    carac = dictio->data;
+    freopen("CON","w",stdout);
+    if (carac == '\0'){
+        fprintf(stdout,"%s\n",retrouve_chaine_carac(temp));
+        liste_fin = ajout_mot(liste_fin,temp);
+        fprintf(stdout,"OK\n");
+        if (dictio->droite != NULL){
+            liste_fin=auto_grille(i,j,liste_fin,temp,dictio->droite,gr);
+        }
+        else {
+            return liste_fin;
+        }
+    }
 
+    int l,col;
+    for (l=0;l<4;l++){
+        for (col=0;col<4;col++){
+            if (gr->jeu[l][col]->letter == dictio->data){
+                if (i != 0 && j != 0 && i != 3 && j != 3 && i != -1 && i != -1){
+                    if (l<=i+1 && l>=i-1 && col>=j-1 && col<=j+1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (i==0 && j==0){
+                    if (l<=i+1 && col<=j+1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (i==0 && j<3){
+                    if (l<=i+1 && col>=j-1 && col<=j+1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j==0 && i<3){
+                    if (l<=i+1 && l>=i-1 && col<=j+1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j==3 && i==0){
+                    if (l<=i+1 && col>=j-1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j==3 && i<3){
+                    if (l<=i+1 && l>=i-1 && col>=j-1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j==3 && i==3){
+                    if (l>=i-1 && col>=j-1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j<3 && i==3){
+                    if (l>=i-1 && col>=j-1 && col<=j+1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else if (j==0 && i==3){
+                    if (l>=i-1 && col<=j+1 && i != -1 && i != -1){
+                        if (!contient_lettre(temp,gr->jeu[l][col])){
+                            temp = ajout_lettre(temp,gr->jeu[l][col]);
+                            liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                            temp = stock;
+                            carac = dico->data;
+                        }
+                    }
+                }
+                else {
+                    if (!contient_lettre(temp,gr->jeu[l][col])){
+                        temp = ajout_lettre(temp,gr->jeu[l][col]);
+                        liste_fin = auto_grille(l,col,liste_fin,temp,dictio->gauche,gr);
+                        temp = stock;
+                        carac = dico->data;
+                    }
+
+                }
+            }
+        }
+    }
+    if (dictio->droite){
+        liste_fin = auto_grille(i,j,liste_fin,temp,dictio->droite,gr);
+    }
+    else {
+        return liste_fin;
+    }
+    return liste_fin;
+    //Sinon, arbre droite
 }
+
+
 

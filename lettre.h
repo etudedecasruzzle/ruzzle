@@ -1,5 +1,6 @@
 #ifndef lettre_h
 #define lettre_h
+#include <stdlib.h>
 
 typedef struct{
     char letter;
